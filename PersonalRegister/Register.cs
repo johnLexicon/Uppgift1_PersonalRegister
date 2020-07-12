@@ -4,16 +4,19 @@ namespace PersonalRegister
 {
     public class Register
     {
-        public IEnumerable<Employee> Employees { get; private set; }
+        public IList<Employee> Employees { get; private set; } = new List<Employee>();
 
         public void AddEmployee(Employee employee)
         {
-            throw new System.NotImplementedException();
+            Employees.Add(employee);
         }
 
         public void PrintEmployees()
         {
-            throw new System.NotImplementedException();
+            foreach (var employee in Employees)
+            {
+                System.Console.WriteLine(employee);
+            }
         }
     }
 }
