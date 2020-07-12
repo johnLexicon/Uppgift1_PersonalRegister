@@ -28,9 +28,9 @@ Vilka attribut och metoder bör ingå i dessa klasser?
   - Name
   - Salary
 - Register
-  - EmployeesCollection
+  - Employees
   - AddEmployee()
-  - SkrivUt()
+  - PrintEmployees()
 
 ## Uppgift 3
 
