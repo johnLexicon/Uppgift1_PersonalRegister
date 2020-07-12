@@ -7,7 +7,7 @@ namespace PersonalRegister
 
         public override string ToString()
         {
-            throw new System.NotImplementedException();
+            return $"Name: {Name}, Salary: {Salary}";
         }
     }
 }
