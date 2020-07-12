@@ -25,6 +25,7 @@ Vilka attribut och metoder bör ingå i dessa klasser?
 - Program
   - Main()
 - Employee
+  - Id
   - Name
   - Salary
 - Register
