@@ -31,6 +31,18 @@ namespace PersonalRegister.Tests
         }
 
         [Fact]
+        public void CreateEmployeeWithoutNameValue()
+        {
+            //Arrange
+            var name = "";
+            var salary = 10000;
+            //Act
+            var sut = new Employee(name, salary);
+            //Assert
+            Assert.Null(sut.Name);
+        }
+
+        [Fact]
         public void ReturnPrintableEmployeeInformation()
         {
             //Arrange

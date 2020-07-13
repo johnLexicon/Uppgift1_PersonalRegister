@@ -7,7 +7,13 @@ namespace PersonalRegister
     {
         //Guid is a value type
         public Guid? Id { get; set; }
-        public string Name { get; set; }
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = String.IsNullOrWhiteSpace(value) ? null : value; }
+        }
+
         public int? Salary { get; set; }
 
         public Employee() : this(null, null)
