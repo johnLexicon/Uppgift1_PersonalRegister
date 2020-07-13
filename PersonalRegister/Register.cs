@@ -13,9 +13,18 @@ namespace PersonalRegister
 
         public void PrintEmployees()
         {
-            foreach (var employee in Employees)
+            if (Employees.Count > 0)
             {
-                System.Console.WriteLine(employee);
+                System.Console.WriteLine("----------Employees---------");
+
+                foreach (var employee in Employees)
+                {
+                    System.Console.WriteLine(employee);
+                }
+            }
+            else
+            {
+                System.Console.WriteLine("No employees in the employee register.");
             }
         }
     }
