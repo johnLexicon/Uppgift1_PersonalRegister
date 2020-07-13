@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace PersonalRegister
 {
@@ -23,11 +24,11 @@ namespace PersonalRegister
         public override string ToString()
         {
             var textForNullValues = "No value";
-            return @$"
-            Id: {(Id is null ? textForNullValues : Id.ToString())}, 
-            Name: {(Name is null ? textForNullValues : Name)}, 
-            Salary: {(Salary is null ? textForNullValues : Salary.ToString())}
-            ";
+            var sb = new StringBuilder();
+            sb.Append($"Id: {(Id is null ? textForNullValues : Id.ToString())}\n");
+            sb.Append($"Name: {(Name is null ? textForNullValues : Name)}\n");
+            sb.Append($"Salary: {(Salary is null ? textForNullValues : Salary.ToString())}\n");
+            return sb.ToString();
         }
     }
 }
