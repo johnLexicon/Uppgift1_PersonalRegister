@@ -22,7 +22,12 @@ namespace PersonalRegister
 
         public override string ToString()
         {
-            return $"Id: {Id}, Name: {Name}, Salary: {Salary}";
+            var textForNullValues = "No value";
+            return @$"
+            Id: {(Id is null ? textForNullValues : Id.ToString())}, 
+            Name: {(Name is null ? textForNullValues : Name)}, 
+            Salary: {(Salary is null ? textForNullValues : Salary.ToString())}
+            ";
         }
     }
 }
